@@ -5,16 +5,16 @@ int main(void)
 {
   int w;
   float h;
-       printf("Input the weight: ");
-       scanf("%d", &w);
-       printf("Input the height: ");
+       printf("Input the height(m): ");
        scanf("%f", &h);
+       printf("Input the weight(kg): ");
+       scanf("%d", &w);
        BMI(w, h);
 }
 
 void BMI (int weight, float height){
-    float temp = weight/ (height * height);
-    printf("BMI = %f\n", temp);
-    printf("\nGrade: ");
-    temp < 18.5 ? printf("Under ") : temp < 25 ? printf("Normal ") : temp < 30 ? printf("Over ") : temp < 40 ? printf("Obese ") : printf("Error");
+    float bmi = weight/ (height * height);
+    printf("BMI = %f\n", bmi);
+    printf("Your BMI is ");
+    bmi < 18.5 ? printf("Underweight ") : bmi < 25 ? printf("Normal ") : bmi < 30 ? printf("Overweight ") : bmi < 40 ? printf("Obese ") : printf("Error");
 } 
